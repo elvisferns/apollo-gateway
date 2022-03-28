@@ -1,0 +1,21 @@
+type Enrollment {
+  id: ID!
+  studentId: ID!
+  courseId: ID!
+}
+
+type Student { 
+  id: ID!
+  enrollments: [Enrollment!]
+}
+
+type Course {
+  enrollments: [Enrollment!]
+}
+
+type Query {
+  enrollments: [Enrollment!]
+  enrollmentsByID(enrollmentId: ID!): Enrollment
+  _studentEnrollments(studentId: ID!): Student
+  _course(courseId: ID!): Course
+}

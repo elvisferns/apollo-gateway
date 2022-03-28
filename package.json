@@ -1,0 +1,36 @@
+{
+  "name": "apollo-graphql",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "apollo graphql server",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --watch gateway --watch libs -e js,graphql gateway/index.js",
+    "start:student": "nodemon --watch students --watch libs -e js,graphql students/index.js",
+    "start:courses": "nodemon --watch courses --watch libs -e js,graphql courses/index.js",
+    "start:enrollments": "nodemon --watch enrollments --watch libs -e js,graphql enrollments/index.js"
+  },
+  "keywords": [
+    "apollo",
+    "graphql"
+  ],
+  "author": "Elvis Fernandes",
+  "license": "ISC",
+  "dependencies": {
+    "@graphql-tools/stitch": "^8.6.2",
+    "apollo-datasource-rest": "^3.5.1",
+    "apollo-server": "^3.6.4",
+    "cross-fetch": "^3.1.5",
+    "graphql": "^16.3.0",
+    "graphql-tools": "^8.2.1",
+    "isemail": "^3.2.0",
+    "sequelize": "^6.17.0",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "@graphql-eslint/eslint-plugin": "^3.9.1",
+    "eslint": "^8.11.0",
+    "nodemon": "^2.0.15"
+  }
+}

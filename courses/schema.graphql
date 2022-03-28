@@ -1,0 +1,16 @@
+type Course {
+  id: ID!
+  name: String!
+}
+
+type Enrollment {
+  course: Course
+}
+
+type Query {
+  courses: [Course!]
+  courseByIDs(ids: [ID!]!): [Course!]
+  courseByID(id: ID!): Course
+  _enrollment(id: ID!): Enrollment
+  _enrollments(ids: [ID!]!): [Enrollment]
+}

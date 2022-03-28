@@ -1,0 +1,16 @@
+type Student {
+  id: ID!
+  name: String!
+  email: String!
+}
+
+type Enrollment {
+  student: Student!
+}
+
+type Query {
+  students: [Student]
+  studentByID(id: ID!): Student,
+  studentEnrollments(studentId: ID!): Student
+  _enrollmentStudents(studentId: ID!): Enrollment
+}
